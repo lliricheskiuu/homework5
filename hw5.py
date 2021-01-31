@@ -118,7 +118,7 @@
 # 5.Дан список my_list. В ЭТОМ списке первый элемент переставить на последнее место.
 # [1,2,3,4] -> [2,3,4,1]. Пересоздавать список нельзя! (используйте метод pop)
 
-my_list = [1, 2, 3, 4, 5]   # 2, 3, 4, 5, 1
+# my_list = [1, 2, 3, 4, 5]   # 2, 3, 4, 5, 1
 
 # 1)
 
@@ -129,7 +129,76 @@ my_list = [1, 2, 3, 4, 5]   # 2, 3, 4, 5, 1
 
 # 2)
 
-tmp = my_list[0]
-my_list.pop(0)
-my_list.append(tmp)
-print(my_list)
+# tmp = my_list[0]
+# my_list.pop(0)
+# my_list.append(tmp)
+# print(my_list)
+
+###
+
+# 6. Дана строка в которой есть числа (разделяются пробелами).
+# Например "43 больше чем 34 но меньше чем 56". Найти сумму ВСЕХ ЧИСЕЛ (А НЕ ЦИФР) в этой строке.
+# Для данного примера ответ - 133.
+
+# my_string = "43 больше чем 34 но меньше чем 56"
+# my_string = my_string.split(' ')
+#
+# result = 0
+#
+# for value in my_string:
+#     if value.isdigit():
+#         value = int(value)
+#         result += value
+#
+# print(result)
+
+###
+
+# 7. Дана строка my_str. Разделите эту строку на пары из двух символов и поместите эти пары в список.
+# Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен
+# быть заменен подчеркиванием ('_'). Примеры: 'abcd' -> ['ab', 'cd'], 'abcde' -> ['ab', 'cd', e_']
+
+# my_str = 'abcd'
+# if not len(my_str) % 2:
+#     my_str = my_str[:2] + ' ' + my_str[2:]
+#     my_str = my_str.split()
+#     print(my_str, type(my_str))
+# else:
+#     my_str = my_str[:2] + ' ' + my_str[2:]
+#     tmp = my_str[-1]
+#     my_str = my_str.replace(my_str[-1], '')
+#     my_str = my_str + ' ' + tmp + '_'
+#     my_str = my_str.split()
+#     print(my_str)
+# # знаю, что решил по хитрому, но я не знаю как по-другому
+
+###
+
+# 8. Дана строка my_str в которой символы не повторяются и два символа l_limit, r_limit,
+# которые точно находятся в этой строке. Причем l_limit левее чем r_limit.
+# В переменную sub_str поместить часть строки между этими символами.
+# my_str = "My_long str", l_limit = "o", r_limit = "t" -> sub_str = "ng s"
+
+# my_str = "My_long str"
+# l_limit = "o"
+# r_limit = "t"
+#
+# count_l = 0
+# count_r = 0
+#
+# for symbol in my_str:
+#     if not symbol == l_limit:
+#         count_l += 1
+#     else:
+#         break
+#
+# for symbol in my_str:
+#     if not symbol == r_limit:
+#         count_r += 1
+#     else:
+#         break
+#
+# sub_str = my_str[count_l + 1:count_r]
+# print(sub_str)
+
+###
